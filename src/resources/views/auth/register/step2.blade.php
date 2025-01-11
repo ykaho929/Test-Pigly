@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PiGLyログイン</title>
-    <link rel="stylesheet" href="{{ asset('css/auth/login.css') }}">
+    <title>PiGLy新規会員登録</title>
+    <link rel="stylesheet" href="{{ asset('css/auth/register2.css') }}">
 
 </head>
 
@@ -14,17 +14,33 @@
         <div class="register__content">
         <div class="register-form__heading">
             <h1>PiGLy<h1>
-            <h2>ログイン</h2>
+            <h2>新規会員登録</h2>
+            <a>STEP2 体重データの入力</a>
         </div>
-        <form class="form" action="/login" method="post">
+        <form class="form" action="/register/step2" method="post">
             @csrf
             <div class="form__group">
                 <div class="form__group-title">
-                    <span class="form__label--item">メールアドレス</span>
+                    <span class="form__label--item">現在の体重</span>
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="email" name="email" value="{{ old('email') }}" placeholder="メールアドレスを入力"/>
+                        <input type="text" name="name" value="{{ old('name') }}"kg placeholder="現在の体重を入力"/>
+                    </div>
+                    <div class="form__error">
+                        @error('name')
+                        {{ $message }}
+                        @enderror
+                    </div>
+                </div>
+            </div>
+            <div class="form__group">
+                <div class="form__group-title">
+                    <span class="form__label--item">目標の体重</span>
+                </div>
+                <div class="form__group-content">
+                    <div class="form__input--text">
+                        <input type="email" name="email" value="{{ old('email') }}"㎏ placeholder="目標の体重を入力"/>
                     </div>
                     <div class="form__error">
                         @error('email')
@@ -33,26 +49,10 @@
                     </div>
                 </div>
             </div>
-            <div class="form__group">
-                <div class="form__group-title">
-                    <span class="form__label--item">パスワード</span>
-                </div>
-                <div class="form__group-content">
-                    <div class="form__input--text">
-                        <input type="password" name="password" placeholder="パスワードを入力"/>
-                    </div>
-                    <div class="form__error">
-                        @error('password')
-                        {{ $message }}
-                        @enderror
-                    </div>
-                </div>
-            </div>
             <div class="form__button">
-                <button class="form__button-submit" type="submit">ログイン</button>
+                <button class="form__button-submit" type="submit">アカウント作成</button>
             </div>
         </form>
-        <div class="register__link" href="/register/step1">アカウント作成はこちら</div>
     </main>
 </body>
 </html>
