@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', [UserController::class, 'admin']);
+Route::get('/register/step1',[UserController::class, 'register']);
 
 

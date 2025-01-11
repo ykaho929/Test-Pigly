@@ -68,7 +68,7 @@
                 <button class="form__button-submit" type="submit">次へ進む</button>
             </div>
         </form>
-        <div class="login__link" href="/login">ログインはこちら</div>
+        <a class="login__link" href="/login">ログインはこちら</a>
     </main>
 </body>
 </html>
