@@ -52,7 +52,7 @@
                 <button class="form__button-submit" type="submit">ログイン</button>
             </div>
         </form>
-        <div class="register__link" href="/register/step1">アカウント作成はこちら</div>
+        <a class="register__link" href="/register/step1">アカウント作成はこちら</a>
     </main>
 </body>
 </html>
