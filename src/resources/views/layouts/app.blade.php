@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  @if (Auth::chek())
     <header class="header">
     <div class="header__inner">
       <div class="header-utilities">
@@ -30,10 +31,10 @@
         </nav>
       </div>
     </div>
-  </header>
-
+    </header>
   <main>
     @yield('content')
   </main>
+  @endif
 </body>
 </html>

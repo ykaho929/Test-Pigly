@@ -18,7 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', [UserController::class, 'admin']);
 Route::get('/register/step1',[UserController::class, 'register']);
+Route::middleware('auth')->group(function() {
+    Route::get('/admin',[UserController::class, 'admin']);
+});
 
 

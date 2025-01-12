@@ -17,7 +17,7 @@
             <h2>新規会員登録</h2>
             <a>STEP1 アカウント情報の登録</a>
         </div>
-        <form class="form" action="/register/step2" method="post">
+        <form class="form" action="/register" method="post">
             @csrf
             <div class="form__group">
                 <div class="form__group-title">
