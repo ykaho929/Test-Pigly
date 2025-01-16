@@ -5,3 +5,6 @@
 @endsection
 
 @section('content')
+@if(Auth::check())
+
+@endif
